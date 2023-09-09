@@ -8,7 +8,7 @@
 
 ### PREFLIGHT - CTRL-8
    - [ ] IRS selectors (Turn Left and Right On)
-   - [ ] ELECTRICAL - Generator control switches (Turn on L1, L2, R1, $2)
+   - [ ] ELECTRICAL - Generator control switches (Turn on L1, L2, R1, R2)
    - [ ] ELECTRICAL - APU to Start (then release it to ON)
    - [ ] FD Door Power (Toggle to ON position)
    - [ ] Turn on Window Heat Switches (L-Side, L-Forward, R-Forward, R-Side)
