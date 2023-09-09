@@ -1,4 +1,4 @@
-# 787-10 CHECKLIST (Flight Simulator 2020 Checklist)
+# 787-10 (Flight Simulator 2020 Checklist + FMC/CDU Instructions)
 
 ## Initialization | Preflight
 
@@ -9,7 +9,7 @@
    - [ ] **ELECTRICAL** - External Power (if AVAIL) for FWD-L/FWD-R/AFTEXT (CTRL-7, Column 1, Center)
 
 ### PREFLIGHT (CTRL-7 / CTRL-8)
-   - [ ] **IRS** - IRS selectors to ON Position (LEFT/RIGHT) (CTRL-8, Column 1, Center)
+   - [ ] **IRS** - [Inertial Reference System](https://skybrary.aero/articles/inertial-reference-system-irs) (IRS) selectors to ON Position (LEFT/RIGHT) (CTRL-8, Column 1, Center)
    - [x] PRIMARY FLIGHT COMPUTERS - Primary Flight Computers Disconnect switch should be closed (default) (CTRL-7, Column 1, Center)
    - [x] ELECTRICAL - IFE/PASS SEATS power switch to ON position (default)  (CTRL-7, Column 1, Center)
    - [x] ELECTRICAL - APU GEN switches (L/R) to ON position (default) (CTRL-7, Column 1, Center)
@@ -42,30 +42,59 @@
    - [x] FLAPS - Ensure Flaps lever is UP (default) (CTRL-4, Middle-Right)]
    - [x] FUEL CONTROL - Ensure L/R fuel control switches are in CUTOFF position (default) (CTRL-4, Center, Down)
    - [x] TRANSPONDER MODE - Ensure the TCAS/ATC selector switch is in STBY position (default) (CTRL-5, Center, Middle)
-    
    
-### CDU/FMC PROGRAMMING (CTRL-3) (If required))
-   - [ ] **CDU/FMC - RTE** - Press RTE button to select initial route information
+### Flight Management Computer (FMC) / Control Display Unit (CDU) PROGRAMMING (CTRL-3) (If required)
+   - [ ] **POS INIT** - Set your initial position (bottom right corner of the CDU/FMC)
+        - [ ] **REF AIRPORT** - Enter [ICAO](https://en.wikipedia.org/wiki/Lists_of_airports_by_IATA_and_ICAO_code) code for originating airport (ICAO - i.e. KSEA)
+        - [ ] **ROUTE** - Press the ROUTE button (bottom right corner of the CDU/FMC)
+   - [ ] **RTE 1** - Press RTE button to select initial route information
         - [ ] **ORIGIN** - Enter [ICAO](https://en.wikipedia.org/wiki/Lists_of_airports_by_IATA_and_ICAO_code) code for originating airport (ICAO - i.e. KSEA), press ORIGIN button
         - [ ] **RUNWAY** - Enter Runway designation (i.e. RW16L), press RUNWAY button
         - [ ] **DEST** - Enter destination airport (ICAO) code, press DEST button
         - [ ] **FLT NO** - Enter Flight Number (i.e. AS612 -- Alaska Airlines Flight 612), press FLT NO button
         - [ ] **ACTIVATE** - Activate the route (RTE 1)
         - [ ] **EXEC** - Press EXEC button to execute the change
-   - [ ] **CDU/FMC - DEP ARR** - Press DEP ARR button to select Departures/Arrival Procedures
+        - [ ] **NEXT PAGE** - Press NEXT PAGE to advance to the routes and add your VIA/AIRWAYS and TO/WAYPOINTS
+   - [ ] **ACT RTE 1** - Press RTE button to select initial route information (i.e. DCT RYANN, J92 OAL, DCT TQILA)
+        - [ ] **VIA** - Enter Jetways if you have them (i.e. J92), if not skip and they will be "DIRECT"
+        - [ ] **TO** - Enter Waypoints if you have them (i.e. RYANN)
+        - [ ] **REPEAT** - Continue repeating VIA/TO entries until done
+        - [ ] **EXEC** - Press EXEC button to execute the change
+        - [ ] **PERF INIT** - Press PERF INIT button (bottom right corner of the CDU/FMC)
+   - [ ] **PERF INIT**
+        - [ ] **ZFW** - Press the Zero Fuel Weight (ZFW) button twice to copy the value to the scratchpad and paste it in
+        - [ ] **RESERVES** - Enter in the amount of fuel you want to reserve (i.e. 10.8)
+        - [ ] **CRZ ALT** - Enter in the Cruise Altitude (i.e. 350)
+        - [ ] **COST INDEX** - Enter in the Cost Index (i.e. 100)
+        - [ ] **EXEC** - Press EXEC button to execute the change
+        - [ ] **THRUST LIM** - Press THRUST LIM button (bottom right corner of the CDU/FMC)
+   - [ ] **THRUST LIM** - 
+        - [ ] **SEL/OAT** - Unless you want to limit your thrust, you can enter the same temperature as the outside air temperature (OAT)
+        - [ ] **TO** - Unless you want to limit your thrust, you can keep the already selected <TO value
+        - [ ] **CLB** - Unless you want to limit your thrust, you can keep the already selected <CLB value
+        - [ ] **EXEC** - Press EXEC button to execute (if you made any changes)
+        - [ ] **TAKEOFF** - Press TAKEOFF button (bottom right corner of the CDU/FMC)
+   - [ ] **TAKEOFF**
+        - [ ] **FLAPS** - Choose your FLAP setting (5 is typical)
+        - [ ] **THRUST** - This should have been set on the previous page, but you can set it here if youy want
+        - [ ] **CG** - Click the Center of Gravity (CG) button twice to copy the value to the scratchpad and paste it in
+        - [ ] **V1** - The REF value should be calculated for you, click the button to copy the REF value
+        - [ ] **VR** - The REF value should be calculated for you, click the button to copy the REF value
+        - [ ] **V2** - The REF value should be calculated for you, click the button to copy the REF value
+        - [ ] **NAVIGATION** - Take the value of V2, and copy it into the IAS speed setting (CTRL-2)
+   - [ ] **DEP ARR** - Press DEP ARR button to select Departures/Arrival Procedures
         - [ ] **SIDS**
             - [ ] Select an appropriate [Standard Instrument Departure](https://en.wikipedia.org/wiki/Standard_instrument_departure) (if required) (i.e. SUMMA2)
             - [ ] Select an appropriate Transition (if required) (i.e. LKV)
         - [ ] **EXEC** - Press EXEC button to execute the change
-   - [ ] **CDU/FMC - DEP ARR** - Press DEP ARR button again to show DEP/ARR INDEX
+   - [ ] **DEP ARR** - Press DEP ARR button again to show DEP/ARR INDEX
         - [ ] **ARR** - Press ARR button 
         - [ ] **STARS** - Choose an appropriate Standard Terminal Arrival Route (STAR) (if required) (i.e. COKTL3)
         - [ ] **TRANS** - Choose an appropriate Transition (if required) (i.e. TQILA)
         - [ ] **APPROACHES** - Choose an appropriate Approach (if known) (i.e. ILS 26L)
         - [ ] **TRANS** - Choose an appropriate Transition (if known) (i.e. ILS 26L)
         - [ ] **EXEC** - Press EXEC button to execute the change
-   - [ ] **CDU/FMC - LEGS** - RTE Data - Build out the Route (RTE 1)
-        - [ ] **WAYPOINT** - Add DCT/AIRWAY/WAYPOINT (if required) (i.e. RYANN & OAL)
+   - [ ] **LEGS** - RTE Data - Build out the Route (RTE 1)
         - [ ] **DISCONTINUITY** - Erase route discontinuity if you have one
              - [ ] Select a leg from your route after the one you want to delete
              - [ ] This copies the name to the scratchpad
